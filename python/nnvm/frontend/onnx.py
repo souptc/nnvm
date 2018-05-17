@@ -558,7 +558,7 @@ class GraphProto(object):
             i_name = self._parse_value_proto(i)
             if i_name in self._params:
                 # i is a param instead of input
-                name_param = 'param_{}'.format(self._num_param)
+                name_param = 'param_%s' % (self._num_param)
                 self._num_param += 1
                 self._params[name_param] = self._params.pop(i_name)
                 self._nodes[name_param] = _sym.Variable(
